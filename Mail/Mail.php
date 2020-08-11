@@ -41,10 +41,10 @@ class Mail
       4. 이메일 : {$om_mail_content[3]}\n
       5. 현장주소 : {$om_mail_content[4]}\n
     ";
-    mail('gs5m@naver.com',$subject,$content);
+    mail('kgas7@naver.com',$subject,$content);
   }
 
-  
+
 }
 
 ?>
