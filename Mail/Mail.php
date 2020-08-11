@@ -1,5 +1,5 @@
 <?php
-namespace om_lib\Mail;
+namespace Mail;
 /**
  * Mail - Kgas Mail Send Class
  * @author OMNIUS
@@ -43,6 +43,8 @@ class Mail
     ";
     mail('gs5m@naver.com',$subject,$content);
   }
+
+  
 }
 
 ?>
