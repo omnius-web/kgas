@@ -10,7 +10,7 @@ namespace om_lib\Mail;
 class Mail
 {
 
-  function __construct($om_mail_conent, $bo_table)
+  function __construct($om_mail_content, $bo_table)
   {
     switch ($bo_table) {
       case 'om9':
@@ -32,6 +32,16 @@ class Mail
         // code...
         break;
     }
+    $subject = $om_mail_content[0]."님의 {$subject_sub} 견적문의 입니다.";
+    $content =
+    "
+      1. 신청인 : {$om_mail_content[0]}\n
+      2. 핸드폰번호 : {$om_mail_content[1]}\n
+      3. 전화번호 : {$om_mail_content[2]}\n
+      4. 이메일 : {$om_mail_content[3]}\n
+      5. 현장주소 : {$om_mail_content[4]}\n
+    ";
+    mail('gs5m@naver.com',$subject,$content);
   }
 }
 
